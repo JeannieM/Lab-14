@@ -17,7 +17,7 @@ public class User extends Player {
 		Scanner scnr = new Scanner(System.in);
 
 		String userWeapon;
-		userWeapon = Validator.getStringMatchingRegexCustomMessage(scnr, "Choose your weapon! Please type R(Rock), P(Paper), or S(Scissors)", "[RrPpSs]", "You chose an unregulated weapon. You're disqualified this round. \nTry again! Choose R, P, or S.").toUpperCase();
+		userWeapon = Validator.getStringMatchingRegexCustomError(scnr, "Choose your weapon! Please type R(Rock), P(Paper), or S(Scissors)", "[RrPpSs]", "You chose an unregulated weapon. You're disqualified this round. \nTry again! Choose R, P, or S.").toUpperCase();
 		
 		switch (userWeapon) {
 			case "R":

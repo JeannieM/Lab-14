@@ -118,7 +118,7 @@ public class Validator {
 	/**
 	 * Get a string of input from the user that must match the given regex AND prints a custom error message.
 	 */
-	public static String getStringMatchingRegexCustomMessage(Scanner scnr, String prompt, String regex, String message) {
+	public static String getStringMatchingRegexCustomError(Scanner scnr, String prompt, String regex, String errorMessage) {
 		boolean isValid = false;
 		String input;
 		do {
@@ -127,7 +127,7 @@ public class Validator {
 			if (input.matches(regex)) {
 				isValid = true;
 			} else {
-				System.err.println(message);
+				System.err.println(errorMessage);
 				isValid = false;
 			}
 
